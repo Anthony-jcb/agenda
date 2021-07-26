@@ -1,0 +1,13 @@
+{
+  "name": "agenda",
+  "version": "1.0.0",
+  "description": "Simply agenda",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Anthony Cedeño, Github: Anthony-jcb",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
