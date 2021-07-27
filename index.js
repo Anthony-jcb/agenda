@@ -2,7 +2,7 @@ import express from "express";
 import {
   agregarContacto,
   obtenerContactos,
-} from "./public/src/mysql_connector.js";
+} from "./public/src/mariadb_connector.js";
 
 let agenda;
 const port = process.env.PORT || 8000;
@@ -21,8 +21,8 @@ app.use(express.static("./public"));
 app.use(express.static("./public/src"));
 app.use(express.static("./public/css"));
 
-app.get("/", (req, res) => {
-  agenda = obtenerContactos();
+app.get("/", async (req, res) => {
+  agenda = await obtenerContactos();
   res.render("index", { contactos: agenda });
 });
 
