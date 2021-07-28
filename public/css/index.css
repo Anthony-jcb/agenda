@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+}
+
+.menuAgregar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+.menuAgregar .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container .title {
+  margin-top: 0.5rem;
+  color: rgb(50, 50, 50);
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.container span {
+  color: rgb(100, 100, 100);
+  font-family: "Roboto", sans-serif;
+}
+
+.container input {
+  width: 18rem;
+  height: 2.5rem;
+  padding-left: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(70, 70, 70);
+
+  outline: none;
+  border: 3px solid transparent;
+  border-bottom: 3px solid rgb(120, 120, 120);
+  background-color: rgb(240, 240, 240);
+  border-radius: 3px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s;
+}
+
+.container input:hover,
+.container input:focus,
+.container input {
+  border-bottom: 3px solid rgb(180, 210, 255);
+  transition: all 0.2s;
+}
+
+.container input::placeholder {
+  color: rgb(182, 182, 182);
+  font-weight: normal;
+}
+
+.container button {
+  width: 100%;
+  height: 2rem;
+  background-color: rgb(240, 240, 240);
+  color: rgb(100, 100, 100);
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+}
+
+.container button:hover {
+  background-color: rgb(180, 210, 255);
+  transition: all 0.2s;
+}
+
+.container button:active {
+  background-color: rgb(100, 155, 255);
+}
+
+.contactos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactos_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 50vw;
+  margin: 0.5rem 0;
+}
+
+.contactos_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactos_info span {
+  margin-right: 2rem;
+  font-size: 1rem;
+}
+
+span.material-icons {
+  color: rgb(255, 100, 100);
+  cursor: pointer;
+}

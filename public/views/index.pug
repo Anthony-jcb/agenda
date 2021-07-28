@@ -1,17 +1,30 @@
-html(lang="es")
+html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title= "Agenda"
+    link(href="index.css" rel="stylesheet")
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href="material_icons.css" rel="stylesheet")
+    link(href='https://fonts.googleapis.com/css2?family=Roboto&display=swap' rel='stylesheet')
   body
-    div.container
-      input(type="text" id="nombre" placeholder="nombre")
-      input(type="text" id="numero" placeholder="numero")
-      button(id="btn_agregar") Agregar
-
+    div.menuAgregar
+      div.container
+        span.title= "New contact"
+        span.inputTitle= "Name"
+        input(type="text" id="nombre" placeholder="Enter name")
+        span= "Phone"
+        input(type="text" id="numero" placeholder="Enter phone")
+        button(id="btn_agregar") Agregar
+    
+    div.contactos
       each contacto in contactos
-        p= `${contacto.name} ${contacto.number}`
+        div.contactos_container
+          div.contactos_info
+            span= `${contacto.name}`
+            span= `${contacto.number}`
+          span(class="borrar material-icons" id=contacto.id) delete
 
   script(src="index_functions.js" type="module")

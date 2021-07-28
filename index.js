@@ -22,13 +22,14 @@ app.use(express.static("./public/src"));
 app.use(express.static("./public/css"));
 
 app.get("/", async (req, res) => {
+  console.log(`NEW GET - Status : ${res.statusCode}`)
   agenda = await obtenerContactos();
   res.render("index", { contactos: agenda });
 });
 
-app.get("/agregar/:nombre/:numero", (req, res) => {
+app.get("/agregar/:nombre/:numero", async (req, res) => {
   const nombre = req.params.nombre;
   const numero = req.params.numero;
-  agregarContacto(nombre, numero);
+  await agregarContacto(nombre, numero);
   res.redirect("/");
 });

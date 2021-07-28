@@ -17,7 +17,6 @@ async function agregarContacto(name, number) {
       "INSERT INTO contacts (name, number) VALUES (?, ?)",
       [name, number]
     );
-    console.log(res);
     return res;
   } catch (err) {
     throw err;
